@@ -13,14 +13,26 @@ SSH Your VPS 
 ## 2) Paste & run (on VPS)
 
 ```bash
-sudo apt update && sudo apt upgrade -y
+sudo apt update
+sudo apt upgrade -y
+
+
 wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
 sudo apt install --assume-yes ./chrome-remote-desktop_current_amd64.deb
-sudo apt install --assume-yes xfce4 desktop-base xscreensaver dbus-x11
+
+sudo apt update
+sudo apt install --assume-yes xfce4 desktop-base
+sudo DEBIAN_FRONTEND=noninteractive \
+    apt install --assume-yes xscreensaver
+sudo systemctl disable lightdm.service
+
 echo "exec /usr/bin/xfce4-session" > ~/.chrome-remote-desktop-session
+
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install --assume-yes ./google-chrome-stable_current_amd64.deb
-sudo systemctl disable lightdm.service || true
+
+sudo apt install dbus-x11
+
 ```
 
 ## 3) Register (headless)
