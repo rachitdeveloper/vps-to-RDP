@@ -39,15 +39,28 @@ sudo apt install dbus-x11
 
 * Open: `https://remotedesktop.google.com/headless` → **Begin** → authorize.
 ![Screenshot](Screenshot1.png)
+
+
 ![Screenshot](Screenshot2.png)
+
+
 ![Screenshot](Screenshot3.png)
+
+
 * Copy the provided command, paste it into the VPS terminal, run it.
+* 
 ![Screenshot](Screenshot4.png)
+
 * Now you will be asked to Create & confirm a **6-digit PIN** when asked. You’ll see "host started successfully".
+
+* 
 ![Screenshot](Screenshot5.png)
 ## 4) Connect
 
 * Open: `https://remotedesktop.google.com/access` click on your machine → sign in → click your VPS → **Connect** → enter PIN.
+
+* Done
+  
 ![Screenshot](Screenshot6.png)
 
 *Made by Rachit Yadav*
